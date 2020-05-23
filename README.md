@@ -384,6 +384,26 @@ console.groupCollapsed(jose.getName()); // Jose Malcher JR
 
 #### 10 - Propriedades Privadas ES6
 
+```js
+class PessoaPrivada{
+    constructor() {
+        this._name;
+    }
+
+    set name(value) {
+        this._name = value;
+    }
+
+    get name() {
+        return this._name;
+    }
+
+}
+
+let jose = new PessoaPrivada;
+jose.name = "Jose Malcher jr";
+console.log(jose.name) // Jose Malcher jr
+```
 
 #### 11 - Métodos Estáticos ES5
 
