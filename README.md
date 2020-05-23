@@ -75,6 +75,36 @@ console.log(cassandra.fullname());
 
 #### 02 - Orientação a Objetos com ES5
 
+```js
+function Pessoa(name, lastName) {
+    console.log("Sou o contrutor...");
+    this.name = name;
+    this.lastName = lastName;
+
+    this.fullName = function () {
+        return `${this.name} ${this.lastName}`;
+    };
+}
+var jose = new Pessoa("José", "Malcher JR")
+console.log(jose);
+console.log(jose.fullName());
+
+/*
+Sou o contrutor...
+Pessoa {name: "Jose", lastName: "Malcher Jr.", fullName: ƒ}
+Jose Malcher Jr.
+* */
+
+var pessoa2 = new Pessoa("Maria", "Joaquina")
+console.log(pessoa2);
+console.log(pessoa2.fullName());
+
+/*
+Sou o contrutor...
+Pessoa {name: "Maria", lastName: "Joaquina", fullName: ƒ}
+Maria Joaquina
+* */
+```
 
 #### 03 - Orientação a Objetos com ES6
 
