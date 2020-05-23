@@ -108,7 +108,7 @@ Maria Joaquina
 
 #### 03 - Orientação a Objetos com ES6
 
-```ecmascript 6
+```js
 class Pessoa {
     constructor(name, lastName) {
         console.log("Contrutor Pessoa");
@@ -133,6 +133,42 @@ José Malche Jr
 
 #### 04 - JavaSript O.O. Herança ES5
 
+```js
+function Pessoa(name, lastName) {
+    this.name = name;
+    this.lastName = lastName;
+
+    this.showInfo = function () {
+        return `${this.name} ${this.lastName}`; 
+    };
+}
+
+function Pfisica(name, lastName, cpf) {
+    Pessoa.call(this, name, lastName);
+    this.cpf = cpf;
+}
+function PJuridica(name, lastName, cnpj) {
+    Pessoa.call(this, name, lastName);
+    this.cnpj = cnpj;
+}
+
+var jose = new Pfisica("Jose", "Malcher jr", 123123123);
+console.log(jose);
+console.log(jose.showInfo());
+/*
+Pfisica {name: "Jose", lastName: "Malcher jr", cpf: 123123123, showInfo: ƒ}
+Jose Malcher jr
+* */
+
+
+var empresa = new PJuridica("Super Ação Web", "Startup Web", 123456789999);
+console.log(empresa);
+console.log(empresa.showInfo());
+/*
+PJuridica {name: "Super Ação Web", lastName: "Startup Web", cnpj: 123456789999, showInfo: ƒ}
+Super Ação Web Startup Web
+* */
+```
 
 #### 05 - JavaSript O.O. Herança ES6
 
