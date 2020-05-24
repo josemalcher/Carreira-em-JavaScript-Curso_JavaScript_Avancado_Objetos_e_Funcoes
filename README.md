@@ -407,6 +407,18 @@ console.log(jose.name) // Jose Malcher jr
 
 #### 11 - Métodos Estáticos ES5
 
+```js
+function DateConverter() {
+
+}
+
+DateConverter.ptBr = function (date) {
+    return date.split('-').reverse().join('/');
+};
+
+var date = DateConverter.ptBr('2020-12-25');
+console.log(date);
+```
 
 #### 12 - Métodos Estáticos ES6
 
